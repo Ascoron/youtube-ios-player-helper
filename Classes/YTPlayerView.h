@@ -284,6 +284,22 @@ typedef void (^YTPlaybackQualityCompletionHandler)(YTPlaybackQuality result,
  */
 - (void)seekToSeconds:(float)seekToSeconds allowSeekAhead:(BOOL)allowSeekAhead;
 
+/**
+ * Change video volume. Corresponds to this method from
+ * the JavaScript API:
+ *   https://developers.google.com/youtube/iframe_api_reference#changing-the-player-volume
+ *
+ * @param volume The volume value.
+ */
+- (void)setVolume:(int)volume;
+
+/**
+ * Mute video. Corresponds to this method from
+ * the JavaScript API:
+ *   https://developers.google.com/youtube/iframe_api_reference#changing-the-player-volume
+ */
+- (void)mute;
+
 #pragma mark - Cueing videos
 
 // Cueing functions for videos. These methods correspond to their JavaScript
