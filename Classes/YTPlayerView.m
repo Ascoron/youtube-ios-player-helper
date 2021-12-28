@@ -124,12 +124,17 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
 }
 
 - (void)setVolume:(int)volume {
-    NSString *command = [NSString stringWithFormat:@"player.setVolume(%d);", volume];
+    NSString *command = [NSString stringWithFormat:@"player.setVolume(%i);", volume];
     [self evaluateJavaScript:command];
 }
 
 - (void)mute {
     NSString *command = @"player.mute();";
+    [self evaluateJavaScript:command];
+}
+
+- (void)unmute {
+    NSString *command = @"player.unMute();";
     [self evaluateJavaScript:command];
 }
 

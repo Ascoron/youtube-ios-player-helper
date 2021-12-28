@@ -300,6 +300,13 @@ typedef void (^YTPlaybackQualityCompletionHandler)(YTPlaybackQuality result,
  */
 - (void)mute;
 
+/**
+ * Unmute video. Corresponds to this method from
+ * the JavaScript API:
+ *   https://developers.google.com/youtube/iframe_api_reference#changing-the-player-volume
+ */
+- (void)unmute;
+
 #pragma mark - Cueing videos
 
 // Cueing functions for videos. These methods correspond to their JavaScript
